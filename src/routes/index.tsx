@@ -60,6 +60,11 @@ export const authRoutes: RoutesProps[] = [
     path: '/error-pages/pages-404',
     element: <Error404 />,
   },
+  {
+    name: 'Not Found',
+    path: '*',
+    element: <Error404 />,
+  },
 ]
 
 export const appRoutes = [
