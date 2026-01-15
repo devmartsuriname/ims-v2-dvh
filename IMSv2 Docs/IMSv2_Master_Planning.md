@@ -255,17 +255,21 @@ Per Documents 1 and 10, the following are **explicitly excluded** from this impl
 
 ## Open Decisions
 
-The following decisions are pending and must be resolved before Phase 1:
+**Status:** ALL RESOLVED ✅  
+**Resolution Document:** `IMSv2_Open_Decisions_Resolution.md`  
+**Resolution Date:** 2026-01-15
 
-| ID | Decision | Impact | Blocking Phase |
-|----|----------|--------|----------------|
-| OD-01 | PRD document numbering correction | Documentation consistency | Phase 0 |
-| OD-02 | Technical Review ownership (Control Officer vs dedicated role) | Role matrix, RLS policies | Phase 1 |
-| OD-03 | Reviewer role specificity (single vs multi-domain) | Role enum definition | Phase 1 |
-| OD-04 | Escalated dossier return path (who can de-escalate) | State machine, RLS | Phase 3 |
-| OD-05 | Auditor role definition (system vs explicit role) | Role matrix | Phase 1 |
-| OD-06 | Raadvoorstel regeneration trigger (Director vs System) | Edge function logic | Phase 4 |
-| OD-07 | Document deletion logging (hard vs soft delete) | Audit strategy | Phase 1 |
+| ID | Decision | Resolution | Status |
+|----|----------|------------|--------|
+| OD-01 | PRD document numbering correction | Canonical order (06, 07, 08) | ✅ RESOLVED |
+| OD-02 | Technical Review ownership | Control Officer delivers; no separate role | ✅ RESOLVED |
+| OD-03 | Reviewer role specificity | Two roles: `social_reviewer`, `financial_reviewer` | ✅ RESOLVED |
+| OD-04 | Escalated dossier return path | Visibility flag, auto-clears on advancement | ✅ RESOLVED |
+| OD-05 | Auditor role definition | System-level access via `admin` role | ✅ RESOLVED |
+| OD-06 | Raadvoorstel regeneration trigger | Director initiates; system generates | ✅ RESOLVED |
+| OD-07 | Document deletion logging | Hard block + audit log; no soft delete | ✅ RESOLVED |
+
+**Binding:** All resolutions are binding for implementation. See `IMSv2_Open_Decisions_Resolution.md` for full details.
 
 ---
 
