@@ -44,6 +44,7 @@ These routes are demo/placeholder content with no IMSv2 relevance:
 | `/forms/*` | Form demos |
 | `/tables/*` | Table demos |
 | `/maps/*` | Map demos |
+| `/maps/vector` | World/Vector map demo - not in IMSv2 scope |
 | `/pages/pricing` | Demo page |
 | `/pages/timeline` | Demo page |
 | `/pages/invoice` | Demo page |
@@ -51,6 +52,11 @@ These routes are demo/placeholder content with no IMSv2 relevance:
 | `/pages/gallery` | Demo page |
 | `/pages/maintenance` | Demo page |
 | `/pages/coming-soon` | Demo page |
+| `/dark-sidenav` | Layout demo - not in IMSv2 scope |
+| `/dark-topnav` | Layout demo - not in IMSv2 scope |
+| `/small-sidenav` | Layout demo - not in IMSv2 scope |
+| `/hidden-sidenav` | Layout demo - not in IMSv2 scope |
+| `/dark-mode` | Layout demo - not in IMSv2 scope |
 
 ### 1.3 Routes to REPLACE (IMSv2 Modules)
 
@@ -107,10 +113,12 @@ These routes will be replaced with IMSv2-specific implementations:
 | Bar charts | Status distributions | State machine metrics |
 | Pie/Donut charts | Category breakdowns | Department distributions |
 | Area charts | Volume over time | Workflow throughput |
+| Sparklines | REUSE | Inline metrics / quick status indicators |
 | Mixed charts | REMOVE | Demo only |
 | Radial charts | REMOVE | Demo only |
 | Polar charts | REMOVE | Demo only |
 | Radar charts | REMOVE | Demo only |
+| World/Vector maps | REMOVE | Demo only - reference: `/maps/vector` |
 
 **Retained Chart Patterns:**
 - ApexCharts configuration structure
@@ -149,6 +157,15 @@ These routes will be replaced with IMSv2-specific implementations:
 | Page titles | Darkone | DVH IMSv2 |
 | Meta description | Darkone Admin | DVH Internal Management System |
 | OG tags | Darkone | DVH IMSv2 |
+
+### 3.4 Session Storage Keys
+
+| Current Key Pattern | Target Pattern |
+|---------------------|----------------|
+| `darkone_*` | `dvh_ims_*` |
+| `DARKONE_*` | `DVH_IMS_*` |
+
+**Action:** All session/localStorage keys will be renamed during the branding phase. No renaming action at this stage.
 
 ---
 
